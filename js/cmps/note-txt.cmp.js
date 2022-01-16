@@ -11,7 +11,6 @@ export default {
       <p>{{note.info.bodyTxt}}</p>
       </div>
         `,
-
   data() {
     return {
       txtColor: this.note.style.txtColor,
@@ -30,7 +29,7 @@ export default {
     },
     openDeleteModal() {
       this.$emit('openDeleteModal', this.note)
-  },
+    },
     changeTxtFont(font) {
       this.note.style.txtFont = font
       this.update()
@@ -42,14 +41,9 @@ export default {
       this.txtFont = this.note.style.txtFont
 
     },
-    focusNote(note) {
-      if (this.note.isOpen) {
-        console.log(note)
-      }
-    },
     pinNote() {
       this.$emit('pin-note', this.note)
-  },
+    },
     cloneNote() {
       this.$emit('clone-note', this.note)
     }

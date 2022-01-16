@@ -3,7 +3,7 @@ export default {
     <section class="filter-notes flex justify-center align-center">
     <fieldset class="filted-area flex">
         <legend>Your search area:</legend>
-        <input type="text" v-model="searchKeyword" placeholder="Search notes by title" @input="searchByKeyword"/>
+        <input type="text" v-model="searchKeyword" placeholder="Search by title" @input="searchByKeyword"/>
     <select class="select" @change="setFilter" v-model="filterType" v-if="options" >
      <option v-for="option in options" :value="option.value">{{option.value}}</option>
     </select>

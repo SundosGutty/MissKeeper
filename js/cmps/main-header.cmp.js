@@ -5,7 +5,7 @@ export default {
          <h1>Miss Keeper</h1>
          <p class="sub-heading">You do you, and we will do the rest</p>
         </div>
-           </header>
+        </header>
     `,
     data() {
         return {

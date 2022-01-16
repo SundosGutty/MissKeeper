@@ -63,7 +63,6 @@ img{
     opacity: 0.4;
 } 
 
-
  #color-picker-wrapper{
     cursor: pointer;
     position: absolute;
@@ -77,4 +76,28 @@ img{
 }
  
 
+/* specific */
 
+/* note-img */
+.note-img img{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(41, 39, 39, 0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+}
+
+
+/* note-todos */
+
+.note-todos li{
+    cursor: pointer;
+}
+
+
+@media (max-width:1110px){
+    .title{
+        padding-bottom: 20px;
+    }
+    iframe{
+        width: 100%;
+    }
+}

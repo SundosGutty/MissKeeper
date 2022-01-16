@@ -86,3 +86,14 @@ ul, li{
 .main-layout{
   min-height: 75vh;
 }
+
+
+.mark-line{
+  text-decoration: line-through;
+}
+
+
+input{
+  border: none;
+  padding-left: 3px;
+}

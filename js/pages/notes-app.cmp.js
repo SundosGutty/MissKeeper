@@ -116,6 +116,7 @@ export default {
         cloneNote(note) {
             notesService.cloneNote(note)
                 .then(() => this.loadNotes())
+                .then(() => this.loadPinnedNotes())
                 .then(() => { const msg = { content: `c`, type: 'success' }; eventBus.$emit('showMsg', msg); })
                 .catch(err => { const msg = { content: `err`, type: 'error' }; eventBus.$emit('showMsg', msg); });
         },
@@ -125,6 +126,7 @@ export default {
             if (!this.filterBy && !this.searchBy) return this.notes
             // if (!this.searchBy && this.filterBy === 'All') return this.notes
             let notesToShow = this.notes
+            console.log(notesToShow)
             notesToShow = notesToShow.filter(note => note.info.titleTxt.toLowerCase().includes(this.searchBy.toLowerCase()))
             if (this.filterBy === 'All') notesToShow = notesToShow.filter(note => note.type === this.filterBy)
             if (this.filterBy) notesToShow = notesToShow.filter(note => note.type === this.filterBy)

@@ -44,7 +44,7 @@ export default {
         changeTxtFont(font) {
             this.note.style.txtFont = font
             this.update()
-            this.$emit('update-note', font, this.note)
+            this.$emit('update-note', this.note)
         },
         update() {
             this.txtColor = this.note.style.txtColor

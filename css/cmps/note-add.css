@@ -4,14 +4,15 @@
     background-color: rgba(173, 216, 230, 0.726);
     border-radius: 5px;
     width: 70%;
-    gap: 20px;
     box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent, 0 2px 15px rgba(0,0,0,0.30);
-
 }
 
+.input-container{
+    padding-right: 40px;
+}
 .input-container input{
-    width: 330px;
     height: 40px;
+    width: 300px;
     border-radius: 2px;
 }
 
@@ -60,4 +61,20 @@
     font-weight: bolder;
 }
 
+@media (max-width: 1110px) {
+    .note-add {
+        padding-top: 20px;
+        width: 95%;
+        flex-wrap: wrap;
+    }
+    .input-container {
+        padding: 0px 10px;
+        gap: 7px;
+    }
+    .input-container input{
+        width: 150px;
+        height: 30px;
+    }
+  
+}
 

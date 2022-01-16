@@ -1,9 +1,4 @@
 @import 'cmps/note-preview.css';
-@import 'cmps/note-img.css';
-@import 'cmps/note-todos.css';
-@import 'cmps/note-txt.css';
-@import 'cmps/pineed-notes.css';
-@import 'cmps/note-video.css';
 @import 'cmps/note-add.css';
 @import 'cmps/note-filter.css';
 
@@ -49,63 +44,10 @@ header .logo-container{
     font-size: 20px;
 }
 
-/* main-app */
-
-@media screen and (max-width:3000px) {
-    .note-add {
-        width: 75%;
-    }
-    .note-add input {
-        width: 250px;
-        height: 30px;
-        border: none;
-        padding: 5px;
-        outline: none;
-      }
-}
-
-@media screen and (max-width: 1100px) {
-    .note-add {
-        flex-direction: column;
-        width: 380px;
-        padding-top: 20px;
-    }
-    .note-add input {
-        width: 150px;
-        height: 30px;
-      }
-      .filter-notes{
-        text-align: center;
-        height: 80px;
-        display: flex;
-        width: 200px;
-    }
-      
-}
-
-@media screen and (max-width: 600px) {
-    .note-add {
-        flex-direction: column;
-        width: 420px;
-        padding-top: 20px;
-    }
-    .note-add button {
-        width: 40px;
-        height: 40px;
-    }
-    .note-add input {
-      
-        width: 80px;
-        height: 30px;
-      }
-      .notes-container{
-        /* display: inline-block;  */
-        margin: 30px;
-        margin-left: 70px;
-    
+@media (max-width: 1110px){
+    .logo-container .sub-heading{
+        font-size: 15px;
     }
 
 }
-
-
 

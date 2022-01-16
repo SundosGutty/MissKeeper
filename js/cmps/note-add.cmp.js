@@ -1,4 +1,3 @@
-
 export default {
     name: 'noteAdd',
     template: `
@@ -16,10 +15,10 @@ export default {
             <i @click="setType('note-map')"   title="Text note"><span class="fas fa-map-marked-alt fa-2x"></span></i>
             <i @click="setType('note-todos')"   title="List note"><span class="fas fa-list fa-2x"></span></i> 
         </fieldset>
-         </div>
+         </div>   
         <div class="btn-add">
         <i @click="addNote" class="add-btn" title="Add note"><span  class="fas fa-plus fa-2x"></span></i>
-</div>
+       </div>
       
            
     </section>

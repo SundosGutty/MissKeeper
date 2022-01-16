@@ -61,3 +61,13 @@
     gap: 10px;
     border-radius: 10px;
   }
+
+
+
+  @media (max-width: 1110px){
+    .modal-content{
+      width: 80%;
+
+    }
+
+  }
