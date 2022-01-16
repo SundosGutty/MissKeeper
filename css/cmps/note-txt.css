@@ -1,0 +1,19 @@
+
+
+
+.note-txt h5{
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: underline;
+
+}
+
+
+
+.note-txt{
+  width: 250px;
+  height: 150px;
+  padding: 10px;
+ 
+}

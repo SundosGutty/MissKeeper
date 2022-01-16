@@ -1,0 +1,11 @@
+
+.note-todos li{
+    cursor: pointer;
+}
+
+
+.mark-line{
+  text-decoration: line-through;
+
+}
+
