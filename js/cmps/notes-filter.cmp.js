@@ -5,15 +5,15 @@ export default {
         <legend>Your search area:</legend>
         <input type="text" v-model="searchKeyword" placeholder="Search by title" @input="searchByKeyword"/>
     <select class="select" @change="setFilter" v-model="filterType" v-if="options" >
-     <option v-for="option in options" :value="option.value">{{option.value}}</option>
+     <option v-for="option in options" :value="option.value">{{option.txt}}</option>
     </select>
     </fieldset>
     </section>
     `,
     data() {
         return {
-            filterType: 'All',
-            options: [{ value: "All", txt: "All" }, { value: "note-txt", txt: "Text Notes" }, { value: "note-img", txt: "Image Notes" }, { value: "note-video", txt: "Video Notes" }, { value: "note-map", txt: "Map Notes" }, { value: "note-todos", txt: "List Notes" }],
+            filterType: '',
+            options: [{ value: "", txt: "All" }, { value: "note-txt", txt: "Text Notes" }, { value: "note-img", txt: "Image Notes" }, { value: "note-video", txt: "Video Notes" }, { value: "note-map", txt: "Map Notes" }, { value: "note-todos", txt: "List Notes" }],
             searchKeyword: '',
         }
     },

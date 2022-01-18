@@ -6,7 +6,7 @@ export default {
   name: 'note-txt',
   template: `
     <div class="note-preview" :style="{ color: txtColor, backgroundColor: bcgColor, 'font-family': txtFont }" >
-    <note-actions  @update-color="updateColor" @txt-font="changeTxtFont" @pin-note="pinNote"  @openDeleteModal="openDeleteModal"  @clone-note="cloneNote"/>   
+    <note-actions :note="note" @update-color="updateColor" @txt-font="changeTxtFont" @pin-note="pinNote"  @openDeleteModal="openDeleteModal"  @clone-note="cloneNote"/>   
      <h5 :style="{color: txtColor, 'font-family': txtFont}">{{note.info.titleTxt}}</h5>
       <p>{{note.info.bodyTxt}}</p>
       </div>

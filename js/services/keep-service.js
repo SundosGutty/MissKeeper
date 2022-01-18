@@ -98,14 +98,15 @@ function pinnNote(note) {
 }
 
 function unpinnNote(note) {
-    removePinnedNote(note)
     save(note)
+    removePinnedNote(note)
     return Promise.resolve('add')
 }
 
 function cloneNote(note) {
     let noteCopy = { ...note }
-    delete noteCopy.id
+    noteCopy.id = ''
+    console.log(noteCopy)
     if (!note.isPinned) {
         let idx = gNotes.findIndex(n => n.id === note.id)
         gNotes.splice(idx + 1, 0, noteCopy)

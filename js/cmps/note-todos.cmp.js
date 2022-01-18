@@ -6,7 +6,7 @@ export default {
     name: 'note-todos',
     template: `
        <div class="note-preview" :style="{ color: txtColor, backgroundColor: bcgColor, 'font-family': txtFont  }" >
-       <note-actions @openDeleteModal="openDeleteModal" @update-color="updateColor" @txt-font="changeTxtFont" @pin-note="pinNote"   @clone-note="cloneNote"/>
+       <note-actions :note="note" @openDeleteModal="openDeleteModal" @update-color="updateColor" @txt-font="changeTxtFont" @pin-note="pinNote"   @clone-note="cloneNote"/>
            <h5 :style="{color: txtColor, 'font-family': txtFont}">{{note.info.titleTxt}}</h5>
            <ul>
         <li @click.stop="markTodo(todo)" :class="{'mark-line': todo.isDone}" v-for="(todo, idx) in note.info.todos">{{todo.todo}} 

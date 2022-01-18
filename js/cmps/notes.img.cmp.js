@@ -5,7 +5,7 @@ export default {
   name: 'note-img',
   template: `
         <div class="note-preview note-img" :style="{ color: txtColor, backgroundColor: bcgColor, 'font-family': txtFont  }" >
-          <note-actions @update-color="updateColor"  @txt-font="changeTxtFont" @pin-note="pinNote"  @openDeleteModal="openDeleteModal"  @clone-note="cloneNote"/>
+          <note-actions :note="note" @update-color="updateColor"  @txt-font="changeTxtFont" @pin-note="pinNote"  @openDeleteModal="openDeleteModal"  @clone-note="cloneNote"/>
           <h5 :style="{color: txtColor, 'font-family': txtFont}">{{note.info.titleTxt}}</h5>
           <img :src="note.info.url" > 
         </div>

@@ -5,7 +5,7 @@ export default {
     name: 'note-map',
     template: `
     <div class="note-preview" :style="{ color: txtColor, backgroundColor: bcgColor, 'font-family': txtFont  }" >
-       <note-actions @update-color="updateColor" @txt-font="changeTxtFont" @openDeleteModal="openDeleteModal" @pin-note="pinNote"  @clone-note="cloneNote"/>
+       <note-actions :note="note" @update-color="updateColor" @txt-font="changeTxtFont" @openDeleteModal="openDeleteModal" @pin-note="pinNote"  @clone-note="cloneNote"/>
            <h5 :style="{ color: txtColor}">{{note.info.titleTxt}}</h5>
            <iframe width="100%" height="200px" ref="map" :src="src"></iframe>
    </div>

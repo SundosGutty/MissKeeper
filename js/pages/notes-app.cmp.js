@@ -80,7 +80,6 @@ export default {
             this.currNote = note
         },
         approveRemove(status) {
-            console.log(this.currNote.isPinned)
             if (status) {
                 this.isShown = !this.isShown
                 if (this.currNote.isPinned) { notesService.removePinnedNote(this.currNote).then(() => this.loadPinnedNotes()) }
@@ -110,13 +109,14 @@ export default {
                 .catch(err => { const msg = { content: `err`, type: 'error' }; eventBus.$emit('showMsg', msg); });
         },
         updateNote(note) {
+            // this.currNote = note
             notesService.updateNote(note)
                 .then(() => this.loadNotes())
+                .then(() => this.loadPinnedNotes())
         },
         cloneNote(note) {
             notesService.cloneNote(note)
                 .then(() => this.loadNotes())
-                .then(() => this.loadPinnedNotes())
                 .then(() => { const msg = { content: `c`, type: 'success' }; eventBus.$emit('showMsg', msg); })
                 .catch(err => { const msg = { content: `err`, type: 'error' }; eventBus.$emit('showMsg', msg); });
         },
@@ -124,21 +124,23 @@ export default {
     computed: {
         notesToShow() {
             if (!this.filterBy && !this.searchBy) return this.notes
-            // if (!this.searchBy && this.filterBy === 'All') return this.notes
             let notesToShow = this.notes
-            console.log(notesToShow)
-            notesToShow = notesToShow.filter(note => note.info.titleTxt.toLowerCase().includes(this.searchBy.toLowerCase()))
-            if (this.filterBy === 'All') notesToShow = notesToShow.filter(note => note.type === this.filterBy)
-            if (this.filterBy) notesToShow = notesToShow.filter(note => note.type === this.filterBy)
+            if (this.searchBy) {
+                notesToShow = notesToShow.filter(note => note.info.titleTxt.toLowerCase().includes(this.searchBy.toLowerCase()))
+            }
+            if (this.filterBy === 'All') return notesToShow.filter(note => note.type === this.filterBy)
+            if (this.filterBy) return notesToShow.filter(note => note.type === this.filterBy)
             return notesToShow
         },
         pinnedNotesToShow() {
             if (!this.pinnedNotes || !this.pinnedNotes.length) return
-            // if (!this.filterBy && !this.searchBy) return this.pinnedNotes
+            if (!this.filterBy && !this.searchBy) return this.pinnedNotes
             let pinnedNotesToShow = this.pinnedNotes
-            pinnedNotesToShow = pinnedNotesToShow.filter(note => note.info.titleTxt.toLowerCase().includes(this.searchBy.toLowerCase()))
-            if (this.filterBy === 'All') pinnedNotesToShow = pinnedNotesToShow.filter(note => note.type === this.filterBy)
-            if (this.filterBy) pinnedNotesToShow = pinnedNotesToShow.filter(note => note.type === this.filterBy)
+            if (this.searchBy) {
+                pinnedNotesToShow = pinnedNotesToShow.filter(note => note.info.titleTxt.toLowerCase().includes(this.searchBy.toLowerCase()))
+            }
+            if (this.filterBy === 'All') return pinnedNotesToShow.filter(note => note.type === this.filterBy)
+            if (this.filterBy) return pinnedNotesToShow.filter(note => note.type === this.filterBy)
             return pinnedNotesToShow
         }
     },

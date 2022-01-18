@@ -6,7 +6,7 @@ export default {
     template: `
         <div class="note-actions flex align-center self-end"> 
         <i class="fas fa-map-pin" @click="pin"></i>
-        <i class="fas fa-copy" @click="clone"></i> 
+        <i class="fas fa-copy" @click="clone" v-if="!note.isPinned"></i> 
         <i class="fas fa-trash-alt" @click="openDeleteModal"></i>
         <i class="fas fa-pen" @click="openColorModel('font')"></i>
         <i class="fas fa-font"><select  id="color-picker-wrapper"  @input="fontStyle($event)">
@@ -40,10 +40,10 @@ export default {
             this.isColorPalette = !this.isColorPalette
         },
         pin() {
-            this.$emit('pin-note', this.note)
+            this.$emit('pin-note')
         },
         clone() {
-            this.$emit('clone-note', this.note)
+            this.$emit('clone-note')
         },
         changeColor(color) {
             this.$emit('update-color', color, this.type)
