@@ -1,0 +1,48 @@
+.filter-notes{
+    width: 40%;
+    margin: auto;
+    background-color: rgb(248, 248, 168);
+    border-radius: 8px;
+    margin-bottom: 40px;
+    padding: 8px 0px; 
+    margin-bottom: 40px;
+    box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent, 0 2px 15px rgba(0,0,0,0.30);
+}
+
+.filter-notes legend{
+    color: lightslategrey;
+    font-weight: bolder;
+ 
+}
+
+.filter-notes fieldset{
+    width: 300px;
+    border-radius: 5px ;
+    border: 3px solid white;
+}
+
+.filter-notes input, select{
+    margin: 10px 15px;
+    border-radius: 5px;
+    border:none;
+    height: 40px;
+    width: 220px;
+}
+
+
+@media (max-width: 1110px) {
+    .filter-notes{
+      text-align: center;
+      height: 80px;
+      display: flex;
+      width: 90%;
+  }
+  .filter-notes input, select{
+    height: 30px;
+    width: 120px;
+}
+::placeholder {
+    font-size: 0.8em;
+  }
+   
+}

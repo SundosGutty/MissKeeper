@@ -1,0 +1,74 @@
+
+.color-container {
+    width: 135px;
+    z-index: 6;
+    background: #fff;
+    position: absolute;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 32%);
+    border-radius: 6px;
+    cursor: pointer;
+}  
+    .color {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 3px;
+    }
+  
+    .aliceblue {
+      background-color: #f0f8ff;
+    }
+  
+    .aquamarine {
+      background-color:	#7fffd4;
+    }
+  
+    .lavender {
+      background-color: lavender;
+    }
+  
+    .lavenderblush{
+      background-color: lavenderblush;
+    }
+  
+    .lightgoldenrodyellow	{
+      background-color: lightgoldenrodyellow	;
+    }
+    .lightgreen{
+      background-color: lightgreen;
+    }
+    .mistyrose{
+      background-color: mistyrose;
+    }
+    .peachpuff{
+      background-color: peachpuff;
+    }
+  
+    .plum{
+      background-color: plum;
+    }
+  
+    .lightBlue {
+      background-color: #6cf;
+    }
+  
+    .wheat{
+      background-color: wheat;
+    }
+  
+    .beige {
+      background-color: beige;
+    }
+  
+    .crimson	 {
+      background-color: crimson	;
+    }
+  
+    .sandybrown {
+      background-color: sandybrown;
+    }
+  
+    .salmon{
+      background-color: salmon;
+    }

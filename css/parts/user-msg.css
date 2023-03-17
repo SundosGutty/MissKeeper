@@ -1,0 +1,35 @@
+.user-msg {
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    border-radius: 5px;
+    z-index: 2;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-25%, -50%);
+    background-color: white;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent, 0 2px 15px rgba(0,0,0,0.30);
+}
+
+.stars{
+    display: flex;
+    flex-direction: row;
+}
+
+.close-btn{
+    color: black;
+    float: right;
+    cursor: pointer;
+ 
+}
+
+.success {
+    background-color: rgb(233, 216, 216);
+}
+
+.error {
+    background-color: lemonchiffon;
+}
+

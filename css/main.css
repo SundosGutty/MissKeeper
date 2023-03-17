@@ -1,0 +1,53 @@
+@import 'cmps/note-preview.css';
+@import 'cmps/note-add.css';
+@import 'cmps/note-filter.css';
+
+
+@import 'parts/user-msg.css';
+@import 'parts/helper.css';
+@import 'parts/delete-modal.css';
+@import 'parts/color-modal.css';
+
+
+* {
+    box-sizing: border-box;
+    line-height: 1.2rem;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* color: rgb(49, 49, 49); */
+    background-color: rgb(245, 246, 248);
+
+}
+
+/* main-header */
+
+header {
+    padding: 40px 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header .logo-container{
+    gap: 20px;
+}
+
+.logo-container h1{
+    font-size: 40px;
+    font-weight: bolder;
+
+}
+
+.logo-container .sub-heading{
+    font-size: 20px;
+}
+
+@media (max-width: 1110px){
+    .logo-container .sub-heading{
+        font-size: 15px;
+    }
+
+}
+
